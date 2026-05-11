@@ -80,6 +80,20 @@
     letter-spacing: 0.3px;
   }
   .nav-links a:hover { background: rgba(255,255,255,0.12); color: #fff; }
+  .nav-right-wrap { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+  .lang-switch {
+    display: flex; border-radius: var(--radius); overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.35);
+  }
+  .lang-btn {
+    background: transparent; color: rgba(255,255,255,0.88);
+    border: none; padding: 7px 11px; font-size: 11px; font-weight: 700;
+    letter-spacing: 0.5px; cursor: pointer; font-family: inherit;
+    transition: background 0.2s, color 0.2s;
+  }
+  .lang-btn[aria-pressed="true"] { background: var(--accent); color: var(--primary-dark); }
+  .lang-btn:hover { background: rgba(255,255,255,0.12); color: #fff; }
+  .lang-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   .nav-cta {
     background: var(--accent) !important;
     color: var(--primary-dark) !important;
@@ -471,13 +485,19 @@
 <nav>
   <a href="#" class="nav-logo">
     <span class="material-icons" style="font-size:26px;color:var(--accent)">hub</span>
-    Талент<span>Хаб</span>
+    <span data-i18n="brand.logo" data-i18n-html="true">Талент<span>Хаб</span></span>
   </a>
-  <div class="nav-links">
-    <a href="#services">Услуги</a>
-    <a href="#process">Как работаем</a>
-    <a href="#about">О нас</a>
-    <a href="#contact" class="nav-cta">Связаться</a>
+  <div class="nav-right-wrap">
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" class="lang-btn" data-set-lang="ru" aria-pressed="true">RU</button>
+      <button type="button" class="lang-btn" data-set-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <div class="nav-links">
+      <a href="#services" data-i18n="nav.services">Услуги</a>
+      <a href="#process" data-i18n="nav.process">Как работаем</a>
+      <a href="#about" data-i18n="nav.about">О нас</a>
+      <a href="#contact" class="nav-cta" data-i18n="nav.contact">Связаться</a>
+    </div>
   </div>
 </nav>
 
@@ -487,53 +507,53 @@
     <div>
       <div class="hero-label">
         <span class="material-icons" style="font-size:14px">verified</span>
-        Лидирующее кадровое агентство
+        <span data-i18n="hero.label">Лидирующее кадровое агентство</span>
       </div>
-      <h1>Находим <em>лучших</em> специалистов для вашего бизнеса</h1>
-      <p>Комплексный подбор персонала, карьерный консалтинг и аутсорсинг HR-функций. Работаем с компаниями любого масштаба.</p>
+      <h1 data-i18n="hero.title" data-i18n-html="true">Находим <em>лучших</em> специалистов для вашего бизнеса</h1>
+      <p data-i18n="hero.lead">Комплексный подбор персонала, карьерный консалтинг и аутсорсинг HR-функций. Работаем с компаниями любого масштаба.</p>
       <div class="hero-btns">
-        <a href="#contact" class="btn-primary">Связаться с нами</a>
-        <a href="#contact" class="btn-outline">Разместить заявку</a>
+        <a href="#contact" class="btn-primary" data-i18n="hero.btn1">Связаться с нами</a>
+        <a href="#contact" class="btn-outline" data-i18n="hero.btn2">Разместить заявку</a>
       </div>
     </div>
     <div class="hero-card">
       <div class="hero-card-header">
         <span class="material-icons">trending_up</span>
         <div class="hero-card-header-text">
-          <p>Актуально сейчас</p>
-          <h3>Горящие вакансии</h3>
+          <p data-i18n="hero.card.now">Актуально сейчас</p>
+          <h3 data-i18n="hero.card.hot">Горящие вакансии</h3>
         </div>
       </div>
       <div class="hero-card-body">
         <div class="stat-row">
-          <div class="stat-item"><div class="num">130</div><div class="lbl">вакансий</div></div>
-          <div class="stat-item"><div class="num">94%</div><div class="lbl">закрытых</div></div>
-          <div class="stat-item"><div class="num">18</div><div class="lbl">дней в среднем</div></div>
+          <div class="stat-item"><div class="num">130</div><div class="lbl" data-i18n="hero.stat.vac">вакансий</div></div>
+          <div class="stat-item"><div class="num">94%</div><div class="lbl" data-i18n="hero.stat.closed">закрытых</div></div>
+          <div class="stat-item"><div class="num">18</div><div class="lbl" data-i18n="hero.stat.days">дней в среднем</div></div>
         </div>
         <div class="vacancy-list">
           <div class="vacancy-item">
             <span class="material-icons">code</span>
             <div class="vacancy-item-info">
               <strong>Senior Backend Developer</strong>
-              <span>Алматы · Удалённо</span>
+              <span data-i18n="hero.job1.meta">Алматы · Удалённо</span>
             </div>
-            <div class="vacancy-item-salary">до 650 000 ₸</div>
+            <div class="vacancy-item-salary" data-i18n="hero.job1.sal">до 650 000 ₸</div>
           </div>
           <div class="vacancy-item">
             <span class="material-icons">bar_chart</span>
             <div class="vacancy-item-info">
-              <strong>Финансовый директор</strong>
-              <span>Астана · Офис</span>
+              <strong data-i18n="hero.job2.title">Финансовый директор</strong>
+              <span data-i18n="hero.job2.meta">Астана · Удалённо</span>
             </div>
-            <div class="vacancy-item-salary">до 900 000 ₸</div>
+            <div class="vacancy-item-salary" data-i18n="hero.job2.sal">до 900 000 ₸</div>
           </div>
           <div class="vacancy-item">
             <span class="material-icons">campaign</span>
             <div class="vacancy-item-info">
               <strong>Head of Marketing</strong>
-              <span>Алматы · Гибрид</span>
+              <span data-i18n="hero.job3.meta">Алматы · Удалённо</span>
             </div>
-            <div class="vacancy-item-salary">до 550 000 ₸</div>
+            <div class="vacancy-item-salary" data-i18n="hero.job3.sal">до 550 000 ₸</div>
           </div>
         </div>
       </div>
@@ -546,19 +566,19 @@
   <div class="stats-inner">
     <div class="stat-bar-item">
       <div class="big">3</div>
-      <div class="desc">года на рынке рекрутинга</div>
+      <div class="desc" data-i18n="stat.years">года на рынке рекрутинга</div>
     </div>
     <div class="stat-bar-item">
       <div class="big">130</div>
-      <div class="desc">успешных трудоустройств</div>
+      <div class="desc" data-i18n="stat.placements">успешных трудоустройств</div>
     </div>
     <div class="stat-bar-item">
       <div class="big">60<sup>+</sup></div>
-      <div class="desc">компаний-партнёров</div>
+      <div class="desc" data-i18n="stat.partners">компаний-партнёров</div>
     </div>
     <div class="stat-bar-item">
       <div class="big">94%</div>
-      <div class="desc">кандидатов после испытательного срока</div>
+      <div class="desc" data-i18n="stat.probation">кандидатов после испытательного срока</div>
     </div>
   </div>
 </div>
@@ -566,39 +586,39 @@
 <!-- SERVICES -->
 <section class="services" id="services">
   <div class="section-inner">
-    <div class="section-label">Что мы делаем</div>
-    <h2 class="section-title">Полный спектр HR-услуг</h2>
-    <p class="section-subtitle">От поиска редких специалистов до полного аутсорсинга HR-отдела — мы закрываем все задачи в сфере управления персоналом.</p>
+    <div class="section-label" data-i18n="svc.label">Что мы делаем</div>
+    <h2 class="section-title" data-i18n="svc.title">Полный спектр HR-услуг</h2>
+    <p class="section-subtitle" data-i18n="svc.sub">От поиска редких специалистов до полного аутсорсинга HR-отдела — мы закрываем все задачи в сфере управления персоналом.</p>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon"><span class="material-icons">person_search</span></div>
-        <h3>Прямой поиск</h3>
-        <p>Целевой поиск и привлечение топ-менеджеров и редких специалистов через закрытую базу и прямые контакты. Гарантия замены кандидата.</p>
+        <h3 data-i18n="svc.1t">Прямой поиск</h3>
+        <p data-i18n="svc.1d">Целевой поиск и привлечение топ-менеджеров и редких специалистов через закрытую базу и прямые контакты. Гарантия замены кандидата.</p>
       </div>
       <div class="service-card">
         <div class="service-icon"><span class="material-icons">groups</span></div>
-        <h3>Массовый подбор</h3>
-        <p>Быстрое закрытие большого объёма однотипных позиций: операторы, продавцы, склад, производство. Чёткие дедлайны и KPI.</p>
+        <h3 data-i18n="svc.2t">Массовый подбор</h3>
+        <p data-i18n="svc.2d">Быстрое закрытие большого объёма однотипных позиций: операторы, продавцы, склад, производство. Чёткие дедлайны и KPI.</p>
       </div>
       <div class="service-card">
         <div class="service-icon"><span class="material-icons">business_center</span></div>
-        <h3>HR-аутсорсинг</h3>
-        <p>Полное или частичное ведение HR-функций: кадровое делопроизводство, подбор, адаптация, оценка и развитие персонала.</p>
+        <h3 data-i18n="svc.3t">HR-аутсорсинг</h3>
+        <p data-i18n="svc.3d">Полное или частичное ведение HR-функций: кадровое делопроизводство, подбор, адаптация, оценка и развитие персонала.</p>
       </div>
       <div class="service-card">
         <div class="service-icon"><span class="material-icons">school</span></div>
-        <h3>Карьерный консалтинг</h3>
-        <p>Помогаем кандидатам найти работу мечты: аудит резюме, подготовка к интервью, карьерное планирование и нетворкинг.</p>
+        <h3 data-i18n="svc.4t">Карьерный консалтинг</h3>
+        <p data-i18n="svc.4d">Помогаем кандидатам найти работу мечты: аудит резюме, подготовка к интервью, карьерное планирование и нетворкинг.</p>
       </div>
       <div class="service-card">
         <div class="service-icon"><span class="material-icons">analytics</span></div>
-        <h3>Оценка персонала</h3>
-        <p>Ассессмент-центры, тестирование профессиональных компетенций, 360-градусная обратная связь и рекомендации по развитию.</p>
+        <h3 data-i18n="svc.5t">Оценка персонала</h3>
+        <p data-i18n="svc.5d">Ассессмент-центры, тестирование профессиональных компетенций, 360-градусная обратная связь и рекомендации по развитию.</p>
       </div>
       <div class="service-card">
         <div class="service-icon"><span class="material-icons">public</span></div>
-        <h3>Международный рекрутинг</h3>
-        <p>Поиск специалистов за рубежом, помощь с релокацией, оформлением визы и адаптацией в новой стране.</p>
+        <h3 data-i18n="svc.6t">Международный рекрутинг</h3>
+        <p data-i18n="svc.6d">Поиск специалистов за рубежом, помощь с релокацией, оформлением визы и адаптацией в новой стране.</p>
       </div>
     </div>
   </div>
@@ -607,29 +627,29 @@
 <!-- PROCESS -->
 <section class="process" id="process">
   <div class="section-inner">
-    <div class="section-label">Как мы работаем</div>
-    <h2 class="section-title">Прозрачный процесс на каждом этапе</h2>
-    <p class="section-subtitle">Строгий, но гибкий алгоритм — именно поэтому 94% закрытых вакансий не возвращаются к нам повторно.</p>
+    <div class="section-label" data-i18n="proc.label">Как мы работаем</div>
+    <h2 class="section-title" data-i18n="proc.title">Прозрачный процесс на каждом этапе</h2>
+    <p class="section-subtitle" data-i18n="proc.sub">Строгий, но гибкий алгоритм — именно поэтому 94% закрытых вакансий не возвращаются к нам повторно.</p>
     <div class="process-steps">
       <div class="step">
         <div class="step-num">01</div>
-        <h4>Брифинг</h4>
-        <p>Выясняем требования, корпоративную культуру, условия и ожидания от кандидата. Согласовываем профиль должности.</p>
+        <h4 data-i18n="proc.s1t">Брифинг</h4>
+        <p data-i18n="proc.s1d">Выясняем требования, корпоративную культуру, условия и ожидания от кандидата. Согласовываем профиль должности.</p>
       </div>
       <div class="step">
         <div class="step-num">02</div>
-        <h4>Поиск</h4>
-        <p>Активный поиск по базе, hh.ru, LinkedIn и прямые контакты. Первичный скрининг резюме и мотивации.</p>
+        <h4 data-i18n="proc.s2t">Поиск</h4>
+        <p data-i18n="proc.s2d">Активный поиск по базе, hh.ru, LinkedIn и прямые контакты. Первичный скрининг резюме и мотивации.</p>
       </div>
       <div class="step">
         <div class="step-num">03</div>
-        <h4>Оценка</h4>
-        <p>Глубинные интервью, проверка рекомендаций и при необходимости — профессиональное тестирование кандидатов.</p>
+        <h4 data-i18n="proc.s3t">Оценка</h4>
+        <p data-i18n="proc.s3d">Глубинные интервью, проверка рекомендаций и при необходимости — профессиональное тестирование кандидатов.</p>
       </div>
       <div class="step">
         <div class="step-num">04</div>
-        <h4>Трудоустройство</h4>
-        <p>Представляем шортлист, сопровождаем переговоры, оффер и выход сотрудника. Поддержка в период испытательного срока.</p>
+        <h4 data-i18n="proc.s4t">Трудоустройство</h4>
+        <p data-i18n="proc.s4d">Представляем шортлист, сопровождаем переговоры, оффер и выход сотрудника. Поддержка в период испытательного срока.</p>
       </div>
     </div>
   </div>
@@ -638,14 +658,14 @@
 <!-- VACANCIES -->
 <section class="vacancies section-hidden" id="vacancies" aria-hidden="true">
   <div class="section-inner">
-    <div class="section-label">Открытые позиции</div>
-    <h2 class="section-title">Актуальные вакансии</h2>
-    <p class="section-subtitle">Более 1 200 позиций по всему Казахстану и СНГ. Найдите работу своей мечты прямо сейчас.</p>
+    <div class="section-label" data-i18n="vac.label">Открытые позиции</div>
+    <h2 class="section-title" data-i18n="vac.title">Актуальные вакансии</h2>
+    <p class="section-subtitle" data-i18n="vac.sub">Более 1 200 позиций по всему Казахстану и СНГ. Найдите работу своей мечты прямо сейчас.</p>
     <div class="vacancies-grid">
       <div class="vac-card">
         <div class="vac-top">
           <div class="vac-title">Senior Frontend Developer (React)</div>
-          <span class="vac-badge badge-remote">Удалённо</span>
+          <span class="vac-badge badge-remote" data-i18n="vac.badge.remote">Удалённо</span>
         </div>
         <div class="vac-company"><span class="material-icons">business</span> Kaspi Bank · Алматы</div>
         <div class="vac-meta">
@@ -659,13 +679,13 @@
       </div>
       <div class="vac-card">
         <div class="vac-top">
-          <div class="vac-title">Операционный директор</div>
-          <span class="vac-badge badge-full">Полная</span>
+          <div class="vac-title" data-i18n="vac.t2">Операционный директор</div>
+          <span class="vac-badge badge-full" data-i18n="vac.badge.full">Полная</span>
         </div>
         <div class="vac-company"><span class="material-icons">business</span> KazMunaiGaz · Астана</div>
         <div class="vac-meta">
           <div class="vac-tags">
-            <span class="vac-tag">Нефтегаз</span>
+            <span class="vac-tag" data-i18n="vac.tag.oil">Нефтегаз</span>
             <span class="vac-tag">5+ лет</span>
             <span class="vac-tag">MBA</span>
           </div>
@@ -675,7 +695,7 @@
       <div class="vac-card">
         <div class="vac-top">
           <div class="vac-title">Product Manager (B2B SaaS)</div>
-          <span class="vac-badge badge-remote">Гибрид</span>
+          <span class="vac-badge badge-remote" data-i18n="vac.badge.hybrid">Гибрид</span>
         </div>
         <div class="vac-company"><span class="material-icons">business</span> Chocofamily · Алматы</div>
         <div class="vac-meta">
@@ -689,15 +709,15 @@
       </div>
       <div class="vac-card">
         <div class="vac-top">
-          <div class="vac-title">Главный бухгалтер</div>
-          <span class="vac-badge badge-full">Полная</span>
+          <div class="vac-title" data-i18n="vac.t4">Главный бухгалтер</div>
+          <span class="vac-badge badge-full" data-i18n="vac.badge.full">Полная</span>
         </div>
         <div class="vac-company"><span class="material-icons">business</span> Forte Bank · Алматы</div>
         <div class="vac-meta">
           <div class="vac-tags">
             <span class="vac-tag">МСФО</span>
             <span class="vac-tag">1С</span>
-            <span class="vac-tag">Банки</span>
+            <span class="vac-tag" data-i18n="vac.tag.bank">Банки</span>
           </div>
           <div class="vac-salary">до 850 000 ₸</div>
         </div>
@@ -705,7 +725,7 @@
       <div class="vac-card">
         <div class="vac-top">
           <div class="vac-title">DevOps / Cloud Engineer (AWS)</div>
-          <span class="vac-badge badge-remote">Удалённо</span>
+          <span class="vac-badge badge-remote" data-i18n="vac.badge.remote">Удалённо</span>
         </div>
         <div class="vac-company"><span class="material-icons">business</span> Beeline KZ · Алматы</div>
         <div class="vac-meta">
@@ -719,8 +739,8 @@
       </div>
       <div class="vac-card">
         <div class="vac-top">
-          <div class="vac-title">Менеджер по продажам B2B</div>
-          <span class="vac-badge badge-part">Частичная</span>
+          <div class="vac-title" data-i18n="vac.t6">Менеджер по продажам B2B</div>
+          <span class="vac-badge badge-part" data-i18n="vac.badge.part">Частичная</span>
         </div>
         <div class="vac-company"><span class="material-icons">business</span> Magnum Cash & Carry · Шымкент</div>
         <div class="vac-meta">
@@ -734,7 +754,7 @@
       </div>
     </div>
     <div class="vacancies-cta">
-      <a href="#" class="btn-primary" style="background: var(--primary); color:#fff;">Все вакансии →</a>
+      <a href="#" class="btn-primary" style="background: var(--primary); color:#fff;" data-i18n="vac.cta">Все вакансии →</a>
     </div>
   </div>
 </section>
@@ -742,40 +762,40 @@
 <!-- TESTIMONIALS -->
 <section class="testimonials section-hidden" aria-hidden="true">
   <div class="section-inner">
-    <div class="section-label">Отзывы</div>
-    <h2 class="section-title">Нам доверяют лидеры рынка</h2>
-    <p class="section-subtitle">Более 340 компаний выбрали ТалентХаб для решения HR-задач любой сложности.</p>
+    <div class="section-label" data-i18n="tst.label">Отзывы</div>
+    <h2 class="section-title" data-i18n="tst.title">Нам доверяют лидеры рынка</h2>
+    <p class="section-subtitle" data-i18n="tst.sub">Более 340 компаний выбрали ТалентХаб для решения HR-задач любой сложности.</p>
     <div class="testimonials-grid">
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <p class="testimonial-text">Закрыли 12 позиций разработчиков за 5 недель. Ни один другой подрядчик не справлялся с такими темпами. Качество кандидатов — выше наших ожиданий.</p>
+        <p class="testimonial-text" data-i18n="tst.q1">Закрыли 12 позиций разработчиков за 5 недель. Ни один другой подрядчик не справлялся с такими темпами. Качество кандидатов — выше наших ожиданий.</p>
         <div class="testimonial-author">
           <div class="author-avatar" style="background: var(--primary);">АС</div>
           <div>
-            <div class="author-name">Асель Сейткали</div>
+            <div class="author-name" data-i18n="tst.n1">Асель Сейткали</div>
             <div class="author-role">CTO, Kolesa Group</div>
           </div>
         </div>
       </div>
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <p class="testimonial-text">Передали им весь HR-аутсорсинг 9 месяцев назад. Теперь у нас порядок в кадрах, текучка снизилась на 30%, а я занимаюсь стратегией, а не бумагами.</p>
+        <p class="testimonial-text" data-i18n="tst.q2">Передали им весь HR-аутсорсинг 9 месяцев назад. Теперь у нас порядок в кадрах, текучка снизилась на 30%, а я занимаюсь стратегией, а не бумагами.</p>
         <div class="testimonial-author">
           <div class="author-avatar" style="background: #00897B;">НМ</div>
           <div>
-            <div class="author-name">Нурлан Мусаев</div>
-            <div class="author-role">Генеральный директор, LogisticsPro</div>
+            <div class="author-name" data-i18n="tst.n2">Нурлан Мусаев</div>
+            <div class="author-role" data-i18n="tst.r2">Генеральный директор, LogisticsPro</div>
           </div>
         </div>
       </div>
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <p class="testimonial-text">Нашли нам финансового директора через хедхантинг за 3 недели. Человек до сих пор работает у нас — уже 2 года. Рекомендую без оговорок.</p>
+        <p class="testimonial-text" data-i18n="tst.q3">Нашли нам финансового директора через хедхантинг за 3 недели. Человек до сих пор работает у нас — уже 2 года. Рекомендую без оговорок.</p>
         <div class="testimonial-author">
           <div class="author-avatar" style="background: #6A1B9A;">ДА</div>
           <div>
-            <div class="author-name">Дарья Ахметова</div>
-            <div class="author-role">Председатель совета директоров, AlphaGroup</div>
+            <div class="author-name" data-i18n="tst.n3">Дарья Ахметова</div>
+            <div class="author-role" data-i18n="tst.r3">Председатель совета директоров, AlphaGroup</div>
           </div>
         </div>
       </div>
@@ -788,64 +808,64 @@
   <div class="section-inner">
     <div class="contact-grid">
       <div>
-        <h2>Готовы найти лучших для вашей команды?</h2>
-        <p>Оставьте заявку — наш консультант свяжется с вами в течение одного рабочего дня и предложит оптимальное решение.</p>
+        <h2 data-i18n="ct.title">Готовы найти лучших для вашей команды?</h2>
+        <p data-i18n="ct.lead">Оставьте заявку — наш консультант свяжется с вами в течение одного рабочего дня и предложит оптимальное решение.</p>
         <div class="contact-info">
           <div class="contact-item">
             <div class="contact-icon"><span class="material-icons">phone</span></div>
             <div class="contact-item-text">
-              <p>Телефон</p>
+              <p data-i18n="ct.phone">Телефон</p>
               <strong><a href="tel:+77029410625" style="color:inherit;text-decoration:none;">+7 702 941 0625</a></strong>
             </div>
           </div>
           <div class="contact-item">
             <div class="contact-icon"><span class="material-icons">email</span></div>
             <div class="contact-item-text">
-              <p>Электронная почта</p>
+              <p data-i18n="ct.email">Электронная почта</p>
               <strong><a href="mailto:nariman@it-bench.work" style="color:inherit;text-decoration:none;">nariman@it-bench.work</a></strong>
             </div>
           </div>
           <div class="contact-item">
             <div class="contact-icon"><span class="material-icons">location_on</span></div>
             <div class="contact-item-text">
-              <p>Офис</p>
-              <strong>Алматы, ул. Абая, 150, БЦ «Алатау», 8 этаж</strong>
+              <p data-i18n="ct.office">Офис</p>
+              <strong data-i18n="ct.addr">Алматы, ул. Абая, 150, БЦ «Алатау», 8 этаж</strong>
             </div>
           </div>
           <div class="contact-item">
             <div class="contact-icon"><span class="material-icons">schedule</span></div>
             <div class="contact-item-text">
-              <p>Режим работы</p>
-              <strong>Пн–Пт: 09:00–18:00</strong>
+              <p data-i18n="ct.hours">Режим работы</p>
+              <strong data-i18n="ct.time">Пн–Пт: 09:00–18:00</strong>
             </div>
           </div>
         </div>
       </div>
       <div class="contact-form">
-        <h3>Оставить заявку</h3>
+        <h3 data-i18n="form.title">Оставить заявку</h3>
         <div class="form-row">
           <div class="form-group">
-            <label>Имя</label>
-            <input type="text" placeholder="Ваше имя">
+            <label data-i18n="form.name">Имя</label>
+            <input type="text" data-i18n-placeholder="form.ph.name" placeholder="Ваше имя">
           </div>
           <div class="form-group">
-            <label>Компания</label>
-            <input type="text" placeholder="Название компании">
+            <label data-i18n="form.company">Компания</label>
+            <input type="text" data-i18n-placeholder="form.ph.company" placeholder="Название компании">
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label>Телефон</label>
-            <input type="tel" placeholder="+7 (___) ___-__-__">
+            <label data-i18n="form.phone">Телефон</label>
+            <input type="tel" data-i18n-placeholder="form.ph.phone" placeholder="+7 (___) ___-__-__">
           </div>
           <div class="form-group">
-            <label>Email</label>
-            <input type="email" placeholder="email@company.kz">
+            <label data-i18n="form.email">Email</label>
+            <input type="email" data-i18n-placeholder="form.ph.email" placeholder="email@company.kz">
           </div>
         </div>
         <div class="form-group">
-          <label>Тип запроса</label>
-          <select>
+          <label data-i18n="form.type">Тип запроса</label>
+          <select id="contactRequestType">
             <option>Подбор специалиста</option>
             <option>Массовый рекрутинг</option>
             <option>HR-аутсорсинг</option>
@@ -854,54 +874,16 @@
           </select>
         </div>
         <div class="form-group">
-          <label>Комментарий</label>
-          <textarea placeholder="Опишите вашу задачу или вопрос..."></textarea>
+          <label data-i18n="form.comment">Комментарий</label>
+          <textarea data-i18n-placeholder="form.ph.comment" placeholder="Опишите вашу задачу или вопрос..."></textarea>
         </div>
-        <button class="form-submit" id="submitBtn">Отправить заявку</button>
+        <button class="form-submit" id="submitBtn" data-i18n="form.submit">Отправить заявку</button>
         <div id="form-msg" style="display:none;margin-top:14px;padding:12px 16px;border-radius:4px;font-size:14px;font-weight:500;"></div>
       </div>
     </div>
   </div>
 </section>
-<script>
-  document.querySelector('.contact-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-  });
-  document.getElementById('submitBtn').addEventListener('click', async function() {
-    const btn = this;
-    const msg = document.getElementById('form-msg');
-    const form = document.querySelector('.contact-form');
-    const inputs = form.querySelectorAll('input, select, textarea');
-    const data = {};
-    const fields = ['name','company','phone','email','type','message'];
-    inputs.forEach((el, i) => { data[fields[i]] = el.value; });
-    btn.disabled = true;
-    btn.textContent = 'Отправка...';
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      });
-      const json = await res.json();
-      msg.style.display = 'block';
-      if (json.success) {
-        msg.style.background = '#E8F5E9'; msg.style.color = '#2E7D32';
-        msg.textContent = json.message;
-        inputs.forEach(el => el.value = '');
-      } else {
-        msg.style.background = '#FFEBEE'; msg.style.color = '#C62828';
-        msg.textContent = json.error || 'Ошибка. Попробуйте ещё раз.';
-      }
-    } catch {
-      msg.style.display = 'block';
-      msg.style.background = '#FFEBEE'; msg.style.color = '#C62828';
-      msg.textContent = 'Ошибка соединения. Попробуйте позже.';
-    }
-    btn.disabled = false;
-    btn.textContent = 'Отправить заявку';
-  });
-</script>
+<script src="/i18n.js" defer></script>
 
 <!-- FOOTER -->
 <footer>
@@ -910,25 +892,25 @@
       <div class="footer-brand">
         <a href="#" class="nav-logo">
           <span class="material-icons" style="font-size:22px;color:var(--accent)">hub</span>
-          Талент<span>Хаб</span>
+          <span data-i18n="brand.logo" data-i18n-html="true">Талент<span>Хаб</span></span>
         </a>
-        <p>Профессиональное кадровое агентство. Работаем с 2022 года. Казахстан, СНГ и международный рекрутинг.</p>
+        <p data-i18n="ft.tagline">Профессиональное кадровое агентство. Работаем с 2022 года. Казахстан, СНГ и международный рекрутинг.</p>
       </div>
       <div class="footer-col">
-        <h4>Услуги</h4>
+        <h4 data-i18n="ft.svc">Услуги</h4>
         <ul>
-          <li><a href="#">Прямой поиск</a></li>
-          <li><a href="#">Массовый подбор</a></li>
-          <li><a href="#">HR-аутсорсинг</a></li>
-          <li><a href="#">Оценка персонала</a></li>
-          <li><a href="#">Карьерный консалтинг</a></li>
+          <li><a href="#" data-i18n="ft.f1">Прямой поиск</a></li>
+          <li><a href="#" data-i18n="ft.f2">Массовый подбор</a></li>
+          <li><a href="#" data-i18n="ft.f3">HR-аутсорсинг</a></li>
+          <li><a href="#" data-i18n="ft.f4">Оценка персонала</a></li>
+          <li><a href="#" data-i18n="ft.f5">Карьерный консалтинг</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Контакты</h4>
+        <h4 data-i18n="ft.ct">Контакты</h4>
         <ul>
-          <li><a href="#">Алматы</a></li>
-          <li><a href="#">Астана</a></li>
+          <li><a href="#" data-i18n="ft.city1">Алматы</a></li>
+          <li><a href="#" data-i18n="ft.city2">Астана</a></li>
           <li><a href="tel:+77029410625">+7 702 941 0625</a></li>
           <li><a href="mailto:nariman@it-bench.work">nariman@it-bench.work</a></li>
         </ul>
@@ -936,8 +918,8 @@
     </div>
     <div class="footer-bottom">
       <div class="footer-legal">
-        <p>© 2026 ТалентХаб. Все права защищены.</p>
-        <p class="footer-iin">ИИН 920213350026</p>
+        <p data-i18n="ft.copy">© 2026 ТалентХаб. Все права защищены.</p>
+        <p class="footer-iin" data-i18n="ft.iin">ИИН 920213350026</p>
       </div>
       <div class="footer-social">
         <a href="#" class="social-btn social-btn--hidden">hh</a>
