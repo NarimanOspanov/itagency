@@ -4,6 +4,7 @@
 
   var I = window.VacI18n;
   var all = [];
+  var loaded = false;
 
   var $state = document.getElementById('vacState');
   var $grid = document.getElementById('vacGrid');
@@ -31,26 +32,21 @@
   }
 
   function cardHtml(p) {
-    var chips = (p.skills || []).slice(0, 4).map(function (s) {
+    var chips = I.pickArr(p.skills).slice(0, 4).map(function (s) {
       return '<span class="chip">' + esc(s) + '</span>';
     }).join('');
-    var meta = [];
-    if (p.location) meta.push('<span><span class="material-icons">place</span>' + esc(p.location) + '</span>');
-    if (p.employment) meta.push('<span><span class="material-icons">schedule</span>' + esc(p.employment) + '</span>');
-    if (p.salary) meta.push('<span class="vac-salary">' + esc(p.salary) + '</span>');
 
     return '' +
       '<a class="vac-card" href="/vacancies/' + encodeURIComponent(p.id) + '">' +
         '<div class="vac-card-top">' +
           '<div class="vac-logo">' + esc(initials(p.companyName)) + '</div>' +
           '<div>' +
-            '<h3>' + esc(p.title) + '</h3>' +
+            '<h3>' + esc(I.pick(p.title)) + '</h3>' +
             '<div class="vac-company">' + esc(p.companyName) + '</div>' +
           '</div>' +
         '</div>' +
-        (meta.length ? '<div class="vac-meta">' + meta.join('') + '</div>' : '') +
         (chips ? '<div class="chips">' + chips + '</div>' : '') +
-        '<div class="vac-excerpt">' + esc(excerpt(p.description)) + '</div>' +
+        '<div class="vac-excerpt">' + esc(excerpt(I.pick(p.description))) + '</div>' +
         '<div class="vac-card-foot">' +
           '<span class="vac-more">' + esc(I.t('card.more')) + ' →</span>' +
           '<span class="vac-date">' + esc(I.formatDate(p.dateCreated)) + '</span>' +
@@ -62,7 +58,7 @@
     var q = ($search.value || '').trim().toLowerCase();
     if (!q) return all;
     return all.filter(function (p) {
-      var hay = [p.title, p.companyName, p.location, (p.skills || []).join(' ')].join(' ').toLowerCase();
+      var hay = [I.pick(p.title), p.companyName, I.pickArr(p.skills).join(' ')].join(' ').toLowerCase();
       return hay.indexOf(q) !== -1;
     });
   }
@@ -91,6 +87,7 @@
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
       .then(function (data) {
         all = Array.isArray(data) ? data : [];
+        loaded = true;
         $state.hidden = true;
         render();
       })
@@ -101,7 +98,7 @@
   }
 
   $search.addEventListener('input', render);
-  I.onChange(function () { if (!$state.hidden) return; render(); });
+  I.onChange(function () { if (loaded) render(); });
 
   load();
 })();

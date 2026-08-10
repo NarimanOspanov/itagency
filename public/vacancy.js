@@ -21,8 +21,8 @@
     try { return decodeURIComponent(raw); } catch (e) { return raw; }
   }
 
-  function hostname(url) {
-    try { return new URL(url).hostname.replace(/^www\./, ''); } catch (e) { return url; }
+  function brand() {
+    return I.lang() === 'en' ? 'TalentHub' : 'ТалентХаб';
   }
 
   function metaRow(icon, label, valueHtml) {
@@ -44,10 +44,16 @@
       '</div>';
   }
 
-  /* Everything built from data (needs re-render on language change). */
-  function renderDynamic() {
+  /* Render everything from data. Called on load and on every language change. */
+  function paint() {
     var p = current;
     if (!p) return;
+
+    document.title = I.pick(p.title) + ' — ' + brand();
+
+    // Title + description
+    document.getElementById('dTitle').textContent = I.pick(p.title);
+    document.getElementById('dDesc').textContent = I.pick(p.description);
 
     // Company + optional website
     var companyHtml = '<span class="material-icons" style="font-size:20px;color:var(--primary)">business</span>' + esc(p.companyName);
@@ -57,18 +63,28 @@
     }
     document.getElementById('dCompany').innerHTML = companyHtml;
 
-    // Meta rows
+    // Skills chips
+    var skills = I.pickArr(p.skills);
+    var $skillsWrap = document.getElementById('dSkillsWrap');
+    if (skills.length) {
+      document.getElementById('dSkills').innerHTML = skills.map(function (s) {
+        return '<span class="chip">' + esc(s) + '</span>';
+      }).join('');
+      $skillsWrap.hidden = false;
+    } else {
+      $skillsWrap.hidden = true;
+    }
+
+    // Meta (posted date)
     var meta = [];
-    if (p.location) meta.push(metaRow('place', I.t('meta.location'), esc(p.location)));
-    if (p.employment) meta.push(metaRow('schedule', I.t('meta.employment'), esc(p.employment)));
-    if (p.salary) meta.push(metaRow('payments', I.t('meta.salary'), esc(p.salary)));
     var posted = I.formatDate(p.dateCreated);
     if (posted) meta.push(metaRow('event', I.t('meta.posted'), esc(posted)));
-    document.getElementById('dMeta').innerHTML = meta.join('');
+    var $meta = document.getElementById('dMeta');
+    $meta.innerHTML = meta.join('');
+    $meta.style.display = meta.length ? '' : 'none';
 
-    // Apply button (sidebar)
-    var $btn = document.getElementById('dApplyBtn');
-    $btn.setAttribute('href', p.applyLink);
+    // Sidebar apply button
+    document.getElementById('dApplyBtn').setAttribute('href', p.applyLink);
 
     // External apply (optional)
     var $extWrap = document.getElementById('dExternalWrap');
@@ -87,24 +103,7 @@
 
   function render(p) {
     current = p;
-    document.title = p.title + ' — ' + (I.lang() === 'en' ? 'TalentHub' : 'ТалентХаб');
-
-    document.getElementById('dTitle').textContent = p.title;
-    document.getElementById('dDesc').textContent = p.description || '';
-
-    // Skills chips
-    var $skillsWrap = document.getElementById('dSkillsWrap');
-    if (p.skills && p.skills.length) {
-      document.getElementById('dSkills').innerHTML = p.skills.map(function (s) {
-        return '<span class="chip">' + esc(s) + '</span>';
-      }).join('');
-      $skillsWrap.hidden = false;
-    } else {
-      $skillsWrap.hidden = true;
-    }
-
-    renderDynamic();
-
+    paint();
     $state.hidden = true;
     $notFound.hidden = true;
     $detail.hidden = false;
@@ -135,7 +134,7 @@
       });
   }
 
-  I.onChange(function () { renderDynamic(); if (current) document.title = current.title + ' — ' + (I.lang() === 'en' ? 'TalentHub' : 'ТалентХаб'); });
+  I.onChange(function () { if (current) paint(); });
 
   load();
 })();

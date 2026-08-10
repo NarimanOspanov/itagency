@@ -69,7 +69,26 @@
       var s = localStorage.getItem('talenthub_lang');
       if (s === 'en' || s === 'ru') return s;
     } catch (e) {}
-    return 'ru';
+    return 'en';
+  }
+
+  /** Resolve a bilingual value ({en, ru}) or plain string to the current language. */
+  function pick(field) {
+    if (field == null) return '';
+    if (typeof field === 'string') return field;
+    var l = lang();
+    if (field[l] != null) return field[l];
+    if (field.en != null) return field.en;
+    if (field.ru != null) return field.ru;
+    return '';
+  }
+
+  /** Resolve a bilingual array ({en:[], ru:[]}) or plain array to the current language. */
+  function pickArr(field) {
+    if (!field) return [];
+    if (Array.isArray(field)) return field;
+    var l = lang();
+    return field[l] || field.en || field.ru || [];
   }
 
   function t(key) {
@@ -123,6 +142,8 @@
     t: t,
     lang: lang,
     apply: apply,
+    pick: pick,
+    pickArr: pickArr,
     countLabel: countLabel,
     formatDate: formatDate,
     onChange: function (fn) { if (typeof fn === 'function') subs.push(fn); }

@@ -293,10 +293,8 @@
       var s = localStorage.getItem(STORAGE_KEY);
       if (s === 'en' || s === 'ru') return s;
     } catch (e) {}
-    if (typeof navigator !== 'undefined' && navigator.language && navigator.language.toLowerCase().indexOf('en') === 0) {
-      return 'en';
-    }
-    return 'ru';
+    // English is the site default when the visitor has no saved preference.
+    return 'en';
   }
 
   function setLang(lang) {

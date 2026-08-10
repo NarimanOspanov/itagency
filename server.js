@@ -33,19 +33,17 @@ function buildApplyLink(id) {
   return `https://t.me/${BOT_USERNAME}?start=${payload}`;
 }
 
+// title/description/skills are bilingual ({ en, ru }); the client picks the language.
 function toPublicPosition(p) {
   return {
     id: p.id,
     title: p.title,
-    description: p.description || '',
+    description: p.description,
     companyName: p.companyName || '',
     companyWebsite: p.companyWebsite || null,
     externalApplyUrl: p.externalApplyUrl || null,
-    location: p.location || null,
-    employment: p.employment || null,
-    salary: p.salary || null,
     dateCreated: p.dateCreated || null,
-    skills: Array.isArray(p.skills) ? p.skills : [],
+    skills: p.skills || {},
     applyLink: buildApplyLink(p.id),
   };
 }

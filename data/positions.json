@@ -1,86 +1,358 @@
 [
   {
     "id": "610947f8-abd7-46d1-8aa1-9be774865a57",
-    "title": "Senior Frontend Developer (React)",
-    "companyName": "RemoteTalentHub",
-    "companyWebsite": "https://it-bench.work",
-    "location": "Алматы · Удалённо",
-    "employment": "Полная занятость",
-    "salary": "до 650 000 ₸",
+    "companyName": "It-Bench",
+    "companyWebsite": "https://it-bench.work/",
     "externalApplyUrl": null,
-    "dateCreated": "2026-08-04T09:00:00.000Z",
+    "dateCreated": "2026-08-03T08:06:41.066Z",
     "isArchived": false,
-    "skills": ["React", "TypeScript", "Next.js", "Redux", "REST API"],
-    "description": "Мы ищем опытного Frontend-разработчика в продуктовую команду. Вы будете отвечать за развитие пользовательских интерфейсов веб-приложения, работать в тесной связке с дизайнерами и бэкенд-командой.\n\nЧем предстоит заниматься:\n— Разработка и поддержка компонентов на React + TypeScript\n— Оптимизация производительности и доступности интерфейсов\n— Проектирование архитектуры фронтенда и code review\n— Участие в планировании спринтов и продуктовых обсуждениях\n\nМы ожидаем:\n— От 4 лет коммерческой разработки на React\n— Уверенное владение TypeScript и современным стеком (Next.js, Redux/RTK)\n— Понимание принципов UX и внимание к деталям\n— Английский язык на уровне чтения технической документации\n\nМы предлагаем:\n— Полностью удалённый формат работы\n— Прозрачную систему грейдов и рост дохода\n— Оплату обучения и профильных конференций"
+    "title": {
+      "en": "Recruitment Specialist",
+      "ru": "Специалист по подбору персонала"
+    },
+    "skills": {
+      "en": [
+        "Recruitment / Talent Acquisition"
+      ],
+      "ru": [
+        "Подбор персонала"
+      ]
+    },
+    "description": {
+      "en": "The company is looking for a Recruitment Specialist to source, assess, and support candidates. Key tasks include posting vacancies, conducting initial interviews, working with hiring managers, and guiding candidates through to their first day.\n\nRequirements:\n\nExperience in recruitment is a plus.\nCandidate sourcing and assessment skills.\nClear spoken and written communication.\nStrong communication and organizational skills.\nConfident PC user.\n\nConditions:\nRemote or office work (depending on the company), official employment, training, and opportunities for professional and career growth.",
+      "ru": "Компания ищет специалиста по подбору персонала для поиска, оценки и сопровождения кандидатов. Основные задачи включают размещение вакансий, проведение первичных интервью, взаимодействие с нанимающими менеджерами и сопровождение кандидатов до выхода на работу.\n\nТребования:\n\nОпыт в подборе персонала будет преимуществом.\nНавыки поиска и оценки кандидатов.\nГрамотная устная и письменная речь.\nКоммуникабельность и организованность.\nУверенное владение ПК.\n\nУсловия:\nУдаленная или офисная работа (в зависимости от компании), официальное трудоустройство, обучение, возможности профессионального и карьерного роста."
+    }
   },
   {
-    "id": "8f2c1d4b-6a9e-4b7c-9d3f-2e5a1b8c7d60",
-    "title": "Финансовый директор (CFO)",
-    "companyName": "RemoteTalentHub",
-    "companyWebsite": "https://it-bench.work",
-    "location": "Астана · Удалённо",
-    "employment": "Полная занятость",
-    "salary": "до 900 000 ₸",
+    "id": "59bc12da-0814-4735-9ae9-19f9d9ea8ac8",
+    "companyName": "It-Bench",
+    "companyWebsite": "https://it-bench.work/",
     "externalApplyUrl": null,
-    "dateCreated": "2026-08-02T09:00:00.000Z",
+    "dateCreated": "2026-08-03T08:05:18.300Z",
     "isArchived": false,
-    "skills": ["Финансовое планирование", "Управленческий учёт", "Бюджетирование", "МСФО"],
-    "description": "Технологическая компания ищет финансового директора для построения и масштабирования финансовой функции.\n\nЗадачи:\n— Стратегическое и операционное финансовое планирование\n— Построение системы управленческого учёта и отчётности\n— Управление денежными потоками, бюджетирование и контроль\n— Взаимодействие с инвесторами и подготовка отчётности по МСФО\n\nТребования:\n— Опыт на позиции CFO/финансового директора от 5 лет\n— Опыт работы в технологических или растущих компаниях\n— Глубокое понимание unit-экономики и финансового моделирования\n\nУсловия:\n— Конкурентная фиксированная часть и годовой бонус\n— Гибридный или удалённый формат"
+    "title": {
+      "en": "Junior Python Developer",
+      "ru": "Junior Python-разработчик"
+    },
+    "skills": {
+      "en": [
+        "Python"
+      ],
+      "ru": [
+        "Python"
+      ]
+    },
+    "description": {
+      "en": "The company is looking for a Junior Python Developer to build and maintain server-side applications, work with APIs, fix bugs, and help grow existing projects under the guidance of an experienced team.\n\nRequirements:\n\nBasic knowledge of Python.\nUnderstanding of OOP and core algorithms.\nExperience with Git.\nExperience with Claude Code, Cursor.\nKnowledge of SQL and database fundamentals.\nEagerness to grow and learn.\n\nConditions:\nRemote or hybrid work (depending on the company), mentorship, room for professional growth, and participation in commercial projects.\n\nPay: Up to $2000",
+      "ru": "Компания ищет Junior Python Developer для разработки и поддержки серверных приложений, работы с API, исправления ошибок и участия в развитии существующих проектов под руководством опытной команды.\n\nТребования:\n\nБазовые знания Python.\nПонимание ООП и основных алгоритмов.\nОпыт работы с Git.\nОпыт работы с Claude Code, Cursor.\nЗнание SQL и основ работы с базами данных.\nЖелание развиваться и обучаться.\n\nУсловия:\nУдаленная или гибридная работа (в зависимости от компании), наставничество, возможность профессионального роста и участие в коммерческих проектах.\n\nОплата: До 2000$"
+    }
   },
   {
-    "id": "b3d5e7a9-1c2f-48d6-a0b4-6f9e2d1a3c5b",
-    "title": "Backend Engineer (Node.js)",
-    "companyName": "RemoteTalentHub",
-    "companyWebsite": "https://it-bench.work",
-    "location": "Удалённо · СНГ",
-    "employment": "Полная занятость",
-    "salary": "до 700 000 ₸",
+    "id": "c9ec01f8-93a7-431f-8380-9d5f32ee511e",
+    "companyName": "It-Bench",
+    "companyWebsite": "https://it-bench.work/",
     "externalApplyUrl": null,
-    "dateCreated": "2026-07-30T09:00:00.000Z",
+    "dateCreated": "2026-08-03T08:04:00.066Z",
     "isArchived": false,
-    "skills": ["Node.js", "PostgreSQL", "Redis", "Docker", "REST API", "BullMQ"],
-    "description": "В команду платформы требуется Backend-инженер для развития серверной части высоконагруженного продукта.\n\nЧем предстоит заниматься:\n— Проектирование и разработка API на Node.js\n— Работа с очередями, кэшированием и фоновыми задачами\n— Оптимизация запросов к базе данных и масштабирование сервисов\n— Написание тестов и участие в code review\n\nОжидания:\n— От 3 лет разработки на Node.js\n— Уверенная работа с PostgreSQL и Redis\n— Опыт с Docker и CI/CD\n— Понимание принципов проектирования распределённых систем\n\nПредлагаем:\n— Удалённую работу и гибкий график\n— Современный стек и сильную инженерную культуру"
+    "title": {
+      "en": "Automation QA Engineer",
+      "ru": "Инженер по автоматизации тестирования (QA)"
+    },
+    "skills": {
+      "en": [
+        "Software QA"
+      ],
+      "ru": [
+        "Тестирование ПО"
+      ]
+    },
+    "description": {
+      "en": "An international IT company is looking for an Automation QA Engineer to build and maintain automated tests for web, mobile, and API applications and integrate them into CI/CD processes.\n\nRequirements:\n\n5+ years of test automation experience.\nKnowledge of Python or Java.\nAPI testing experience.\nProficiency with Git.\nExperience working in Agile/Scrum.\nStrong communication skills.\n\nConditions:\nRemote work, modern equipment, paid vacation, and work in an international team.",
+      "ru": "Международная IT-компания ищет Automation QA Engineer для разработки и поддержки автоматизированных тестов веб-, мобильных и API-приложений, а также их интеграции в CI/CD-процессы.\n\nТребования:\n\nОпыт автоматизации тестирования от 5 лет.\nЗнание Python или Java.\nОпыт тестирования API.\nВладение Git.\nОпыт работы в Agile/Scrum.\nХорошие коммуникативные навыки.\n\nУсловия:\nУдаленная работа, современное оборудование, оплачиваемый отпуск и работа в международной команде."
+    }
   },
   {
-    "id": "c4e6f8b0-2d3a-49e7-b1c5-7a0f3e2b4d6c",
-    "title": "Product Designer (UX/UI)",
-    "companyName": "RemoteTalentHub",
-    "companyWebsite": "https://it-bench.work",
-    "location": "Алматы · Гибрид",
-    "employment": "Полная занятость",
-    "salary": "до 550 000 ₸",
+    "id": "ef346523-6272-4665-b777-9cda138c0696",
+    "companyName": "It-Bench",
+    "companyWebsite": "https://it-bench.work/",
     "externalApplyUrl": null,
-    "dateCreated": "2026-07-28T09:00:00.000Z",
+    "dateCreated": "2026-08-03T08:00:10.046Z",
     "isArchived": false,
-    "skills": ["Figma", "UX Research", "Прототипирование", "Design System"],
-    "description": "Ищем продуктового дизайнера, который любит решать задачи пользователей через понятные и красивые интерфейсы.\n\nЗадачи:\n— Проектирование пользовательских сценариев и интерфейсов\n— Проведение UX-исследований и юзабилити-тестов\n— Развитие и поддержка дизайн-системы\n— Тесная работа с продуктом и разработкой\n\nТребования:\n— Портфолио с продуктовыми кейсами\n— Уверенное владение Figma\n— Понимание принципов UX и доступности\n\nУсловия:\n— Гибридный формат в Алматы или удалённо\n— Влияние на продукт и свобода в решениях"
+    "title": {
+      "en": "Customer Support Specialist",
+      "ru": "Специалист службы поддержки клиентов"
+    },
+    "skills": {
+      "en": [
+        "Sales & Customer Support"
+      ],
+      "ru": [
+        "Продажи и поддержка клиентов"
+      ]
+    },
+    "description": {
+      "en": "The company is looking for a specialist to handle incoming calls and help customers place orders through an internal system. The main tasks are advising users and resolving questions related to the service.\n\nRequirements:\n\nFluency in Kazakh and Russian.\nClear spoken communication.\nA laptop or PC, stable internet, and a headset.\n\nConditions:\nRemote work, official employment, a 2/2 shift schedule, competitive salary, company-paid training, and career growth opportunities.",
+      "ru": "Компания ищет специалиста для обработки входящих звонков и помощи клиентам с оформлением заказов через внутреннюю систему. Основные задачи — консультирование пользователей и решение вопросов, связанных с работой сервиса.\n\nТребования:\n\nВладение казахским и русским языками.\nГрамотная устная речь.\nНаличие ноутбука или ПК, стабильного интернета и гарнитуры.\n\nУсловия:\nУдаленная работа, официальное трудоустройство, сменный график 2/2, конкурентная заработная плата, обучение за счет компании и возможности карьерного роста."
+    }
   },
   {
-    "id": "d5f7a9c1-3e4b-40f8-c2d6-8b1a4f3c5e7d",
-    "title": "DevOps Engineer",
-    "companyName": "RemoteTalentHub",
-    "companyWebsite": "https://it-bench.work",
-    "location": "Удалённо",
-    "employment": "Полная занятость",
-    "salary": "до 800 000 ₸",
+    "id": "7e6d838c-e914-4303-acc9-bf8bb40c3da5",
+    "companyName": "It-Bench",
+    "companyWebsite": "https://it-bench.work/",
     "externalApplyUrl": null,
-    "dateCreated": "2026-07-25T09:00:00.000Z",
+    "dateCreated": "2026-08-03T07:57:47.500Z",
     "isArchived": false,
-    "skills": ["Kubernetes", "Terraform", "AWS", "CI/CD", "Prometheus", "Linux"],
-    "description": "Требуется DevOps-инженер для развития инфраструктуры и процессов доставки в облаке.\n\nЧем предстоит заниматься:\n— Поддержка и развитие Kubernetes-кластеров\n— Автоматизация инфраструктуры через Terraform\n— Настройка и улучшение CI/CD пайплайнов\n— Мониторинг, логирование и обеспечение надёжности сервисов\n\nОжидания:\n— Опыт с Kubernetes и облачными провайдерами (AWS/GCP/Azure)\n— Уверенное владение Linux и скриптингом\n— Опыт построения наблюдаемости (Prometheus, Grafana)\n\nПредлагаем:\n— Полностью удалённый формат\n— Современную инфраструктуру и интересные технические задачи"
+    "title": {
+      "en": "SEO Specialist / PPC Specialist",
+      "ru": "SEO-специалист / Специалист по контекстной рекламе"
+    },
+    "skills": {
+      "en": [
+        "Targeted Advertising"
+      ],
+      "ru": [
+        "Таргетированная реклама"
+      ]
+    },
+    "description": {
+      "en": "The company is looking for a specialist with experience in SEO and/or paid search (PPC) advertising. You will promote websites, set up and optimize ad campaigns, and analyze their performance.\n\nRequirements:\n\n3+ years of experience.\nA track record of successfully running several projects.\nProficiency with modern SEO and PPC tools.\nWillingness to provide references from previous employers or clients.\n\nConditions:\nRemote work; salary discussed individually.",
+      "ru": "Компания ищет специалиста с опытом в SEO-продвижении и/или контекстной рекламе. Предстоит заниматься продвижением сайтов, настройкой и оптимизацией рекламных кампаний, а также анализом эффективности.\n\nТребования:\n\nОпыт работы от 3 лет.\nОпыт успешного ведения нескольких проектов.\nВладение современными SEO- и PPC-инструментами.\nГотовность предоставить рекомендации от предыдущих работодателей или заказчиков.\n\nУсловия:\nУдаленная работа, заработная плата обсуждается индивидуально."
+    }
   },
   {
-    "id": "e6a8b0d2-4f5c-41a9-d3e7-9c2b5a4d6f8e",
-    "title": "QA Automation Engineer",
-    "companyName": "RemoteTalentHub",
-    "companyWebsite": "https://it-bench.work",
-    "location": "Удалённо · СНГ",
-    "employment": "Полная занятость",
-    "salary": "до 600 000 ₸",
+    "id": "6ecf0150-c58e-43f6-ac80-3e126b411aef",
+    "companyName": "It-Bench",
+    "companyWebsite": "https://it-bench.work/",
     "externalApplyUrl": null,
-    "dateCreated": "2026-07-22T09:00:00.000Z",
+    "dateCreated": "2026-08-03T07:54:30.180Z",
     "isArchived": false,
-    "skills": ["Playwright", "TypeScript", "CI/CD", "API Testing"],
-    "description": "В команду качества нужен инженер по автоматизации тестирования.\n\nЗадачи:\n— Разработка и поддержка автотестов (E2E, API)\n— Интеграция тестов в CI/CD\n— Развитие тестовой инфраструктуры и отчётности\n— Взаимодействие с разработкой для повышения качества релизов\n\nТребования:\n— Опыт автоматизации на Playwright/Cypress или аналогах\n— Уверенное владение TypeScript/JavaScript\n— Понимание принципов тестирования и работы API\n\nУсловия:\n— Удалённый формат и гибкий график\n— Возможность влиять на процессы качества"
+    "title": {
+      "en": "Player Support Manager (Game Support)",
+      "ru": "Менеджер по поддержке игроков (Game Support)"
+    },
+    "skills": {
+      "en": [
+        "Sales & Customer Support"
+      ],
+      "ru": [
+        "Продажи и поддержка клиентов"
+      ]
+    },
+    "description": {
+      "en": "An international gaming company is looking for a Player Support Specialist. Key tasks: handling user requests via email and other channels, resolving technical, gameplay, and payment issues, responding to app-store reviews, maintaining the knowledge base, and reporting issues to the development team.\n\nRequirements:\n\n3+ years in customer support or community management.\nEnglish at Upper-Intermediate level or higher.\nUnderstanding of how mobile apps (iOS/Android) work.\nExperience with Zendesk, Freshdesk, Helpshift, or similar systems.\n\nNice to have:\n\nExperience with AppFollow, Google Play Console.\nUnderstanding of the game development process.\nInterest in mobile games.\n\nConditions:\nRemote or office work, flexible schedule, private health insurance (depending on region), reimbursement for training and language courses, corporate events, and other perks.",
+      "ru": "Международная игровая компания ищет специалиста поддержки игроков. Основные задачи: обработка обращений пользователей по email и другим каналам, решение технических, игровых и платежных вопросов, ответы на отзывы в магазинах приложений, ведение базы знаний и передача информации о проблемах команде разработки.\n\nТребования:\n\nОпыт в клиентской поддержке или комьюнити-менеджменте от 3 лет.\nАнглийский язык — Upper-Intermediate и выше.\nПонимание работы мобильных приложений (iOS/Android).\nОпыт работы с Zendesk, Freshdesk, Helpshift или аналогичными системами.\n\nБудет плюсом:\n\nОпыт с AppFollow, Google Play Console.\nПонимание процесса разработки игр.\nИнтерес к мобильным играм.\n\nУсловия:\nУдаленная работа или офис, гибкий график, ДМС (в зависимости от региона), компенсация обучения и языковых курсов, корпоративные мероприятия и другие бонусы."
+    }
+  },
+  {
+    "id": "60720814-bcca-44eb-aaf5-25e3cc9662fa",
+    "companyName": "It-Bench",
+    "companyWebsite": "https://it-bench.work/",
+    "externalApplyUrl": null,
+    "dateCreated": "2026-07-02T03:07:20.150Z",
+    "isArchived": false,
+    "title": {
+      "en": "Middle/Senior Golang Developer",
+      "ru": "Middle/Senior Golang-разработчик"
+    },
+    "skills": {
+      "en": [
+        "Go"
+      ],
+      "ru": [
+        "Go"
+      ]
+    },
+    "description": {
+      "en": "Position: Golang Developer\nPay: $2000 to $5000\n\nWe are looking for a Golang Developer to join our team and build modern, scalable, high-load services. If you enjoy writing clean code, designing architecture, and solving complex technical problems, we would love to meet you.\n\nResponsibilities:\n\n* Develop and maintain backend services in Go.\n* Design and implement REST/gRPC APIs.\n* Work with PostgreSQL, Redis, and messaging systems.\n* Integrate with external services and APIs.\n* Write unit and integration tests.\n* Optimize performance and improve application reliability.\n* Participate in code reviews and architecture discussions.\n\nRequirements:\n\n* 2+ years of commercial Go development.\n* Strong knowledge of Go and its standard library.\n* Experience with PostgreSQL and SQL.\n* Understanding of microservice architecture principles.\n* Experience building REST APIs, and preferably gRPC.\n* Knowledge of Docker, Git, and CI/CD.\n* Understanding of multithreading, concurrency, and networking.\n\nNice to have:\n\n* Experience with Kubernetes.\n* Knowledge of Kafka, RabbitMQ, or NATS.\n* Experience with AWS, GCP, or Azure cloud platforms.\n* Understanding of Domain-Driven Design and Clean Architecture.",
+      "ru": "Вакансия: Golang Developer\nОплата: от 2000$ до 5000$\n\nМы ищем Golang Developer, который присоединится к нашей команде для разработки современных, масштабируемых и высоконагруженных сервисов. Если вам нравится писать чистый код, проектировать архитектуру и решать сложные технические задачи, мы будем рады познакомиться с вами.\n\nОбязанности:\n\n* Разработка и поддержка backend-сервисов на Go.\n* Проектирование и реализация REST/gRPC API.\n* Работа с PostgreSQL, Redis и системами обмена сообщениями.\n* Интеграция с внешними сервисами и API.\n* Написание модульных и интеграционных тестов.\n* Оптимизация производительности и повышение надежности приложений.\n* Участие в код-ревью, обсуждении архитектуры и технических решений.\n\nТребования:\n\n* Опыт коммерческой разработки на Go от 2 лет.\n* Хорошее знание языка Go и его стандартной библиотеки.\n* Опыт работы с PostgreSQL и SQL.\n* Понимание принципов микросервисной архитектуры.\n* Опыт разработки REST API и желательно gRPC.\n* Знание Docker, Git и CI/CD.\n* Понимание принципов многопоточности, конкурентности и сетевого взаимодействия.\n\nБудет плюсом:\n\n* Опыт работы с Kubernetes.\n* Знание Kafka, RabbitMQ или NATS.\n* Опыт работы с облачными платформами AWS, GCP или Azure.\n* Понимание Domain-Driven Design и Clean Architecture"
+    }
+  },
+  {
+    "id": "babde9eb-2599-4877-b65e-85a983c7017b",
+    "companyName": "It-Bench",
+    "companyWebsite": "https://it-bench.work/",
+    "externalApplyUrl": null,
+    "dateCreated": "2026-05-18T10:46:22.826Z",
+    "isArchived": false,
+    "title": {
+      "en": "Data Analyst",
+      "ru": "Аналитик данных (Data Analyst)"
+    },
+    "skills": {
+      "en": [
+        "Data Engineering",
+        "Data Analysis",
+        "Data Science"
+      ],
+      "ru": [
+        "Дата-инжиниринг",
+        "Анализ данных",
+        "Data Science"
+      ]
+    },
+    "description": {
+      "en": "Position: Middle/Senior Data Analyst\nCompany: It-Bench\n\nWebsite: https://it-bench.work/\n\nRole: Middle/Senior Data Analyst\n\nSalary: $2,000 – $5,000 (based on interview results)\n\nLocation: Worldwide (Remote)\n\nFormat: Full-time\n\nWe are looking for an experienced Data Analyst for our international team. If you love finding insights in data, designing interactive dashboards, and helping the business make the right decisions — let's talk!\n\nWhat we expect:\n✅ 3+ years of experience as a Data Analyst or BI Analyst.\n✅ Excellent SQL (complex queries, optimization) and Python (Pandas, NumPy).\n✅ Experience with BI tools (Tableau, Power BI, or Looker).\n✅ Understanding of A/B testing and product/business metrics.\n✅ English: B2 (Upper-Intermediate) or higher.\n\nWhat you will do:\n• Analyze complex datasets to find trends, patterns, and growth opportunities.\n• Design, build, and maintain automated dashboards and reports.\n• Run A/B tests and evaluate the impact of product features.\n• Collaborate with a distributed international team to make data-driven decisions.\n\nWhat we offer:\n🌍 100% remote work from anywhere in the world.\n💸 Competitive salary in USD.\n🚀 Dynamic environment with no bureaucracy.\n⏰ Flexible working hours.",
+      "ru": "Вакансия: Middle/Senior Data Analyst\nКомпания: It-bench\n\nСайт: https://it-bench.work/\n\nПозиция: Middle/Senior Data Analyst\n\nЗарплата: $2,000 – $5,000 (По результатам собеседования)\n\nЛокация: Worldwide (Удаленка)\n\nФормат: Full-time\n\nМы ищем опытного Data Analyst в нашу международную команду. Если вы любите находить инсайты в данных, проектировать интерактивные дашборды и помогать бизнесу принимать правильные решения — давайте общаться!\n\nЧто мы ожидаем:\n✅ Опыт работы в роли Data Analyst или BI-аналитика от 3 лет.\n✅ Отличное знание SQL (сложные запросы, оптимизация) и Python (Pandas, NumPy).\n✅ Опыт работы с BI-инструментами (Tableau, Power BI или Looker).\n✅ Понимание принципов проведения A/B-тестирования и продуктовых/бизнес метрик.\n✅ Уровень английского: B2 (Upper-Intermediate) и выше.\n\nЧем предстоит заниматься:\n• Анализировать сложные наборы данных для поиска трендов, паттернов и точек роста.\n• Проектировать, создавать и поддерживать автоматизированные дашборды и отчеты.\n• Запускать A/B-тесты и оценивать эффективность продуктовых фич.\n• Взаимодействовать с распределенной международной командой для принятия решений на основе данных.\n\nЧто мы предлагаем:\n🌍 100% удаленная работа из любой точки мира.\n💸 Конкурентная заработная плата в USD.\n🚀 Динамичная рабочая атмосфера без бюрократии.\n⏰ Гибкий рабочий график."
+    }
+  },
+  {
+    "id": "84f8b063-7812-48b3-8dbc-d45925c45eff",
+    "companyName": "It-Bench",
+    "companyWebsite": "https://it-bench.work/",
+    "externalApplyUrl": null,
+    "dateCreated": "2026-05-16T18:20:00.916Z",
+    "isArchived": false,
+    "title": {
+      "en": "QA Engineer (Middle)",
+      "ru": "QA-инженер (Middle)"
+    },
+    "skills": {
+      "en": [
+        "Software QA",
+        "QA"
+      ],
+      "ru": [
+        "Тестирование ПО",
+        "QA"
+      ]
+    },
+    "description": {
+      "en": "Hiring a Middle QA Engineer to join a fully remote AI-powered sales management platform focused on client acquisition and retention, with responsibilities including manual and API testing, bug reporting, and ensuring product quality, offering a salary of $1,500–$2,500 USD/month.",
+      "ru": "Требуется Middle QA-инженер в полностью удаленную AI-платформу для управления продажами, ориентированную на привлечение и удержание клиентов. Обязанности включают ручное и API-тестирование, оформление баг-репортов и обеспечение качества продукта. Зарплата: $1,500–$2,500 в месяц."
+    }
+  },
+  {
+    "id": "fea8ec27-e0f2-4356-a99a-fed5de60ecb4",
+    "companyName": "It-Bench",
+    "companyWebsite": "https://it-bench.work/",
+    "externalApplyUrl": null,
+    "dateCreated": "2026-05-13T07:41:08.340Z",
+    "isArchived": false,
+    "title": {
+      "en": "Middle/Senior JavaScript Developer",
+      "ru": "Middle/Senior JavaScript-разработчик"
+    },
+    "skills": {
+      "en": [
+        "React",
+        "React Native",
+        "Vue.js",
+        "Angular"
+      ],
+      "ru": [
+        "React",
+        "React Native",
+        "Vue.js",
+        "Angular"
+      ]
+    },
+    "description": {
+      "en": "Position: Middle/Senior JavaScript Developer\nSalary: $2,000 – $5,000 (Based on experience)\nLocation: Worldwide (Remote)\nFormat: Full-time\n\nWe are looking for an experienced JavaScript Developer to join our international team. If you love building scalable web applications and working with a modern tech stack, let’s talk!\n\nWhat we expect:\n✅ 3+ years of experience with JavaScript/TypeScript.\n✅ Deep knowledge of React (or Vue/Angular).\n✅ Experience with state management (Redux, MobX, etc.).\n✅ Familiarity with Docker and CI/CD.\n✅ English level: B2 (Upper-Intermediate) or higher.\n\nWhat you will do:\n• Develop and maintain high-performance web applications.\n• Participate in architectural decisions.\n• Conduct code reviews and ensure high code quality.\n• Collaborate with a distributed global team.\n\nWhat we offer:\n🌍 100% remote work from any part of the world.\n💸 Competitive salary in USD.\n🚀 Fast-paced environment with no bureaucracy.\n⏰ Flexible working hours.",
+      "ru": "Позиция: Middle/Senior JavaScript-разработчик\nЗарплата: $2,000 – $5,000 (в зависимости от опыта)\nЛокация: Worldwide (удаленно)\nФормат: Full-time\n\nМы ищем опытного JavaScript-разработчика в нашу международную команду. Если вам нравится создавать масштабируемые веб-приложения и работать с современным стеком — давайте пообщаемся!\n\nЧто мы ожидаем:\n✅ Опыт работы с JavaScript/TypeScript от 3 лет.\n✅ Глубокое знание React (или Vue/Angular).\n✅ Опыт работы с управлением состоянием (Redux, MobX и т. п.).\n✅ Знакомство с Docker и CI/CD.\n✅ Английский язык: B2 (Upper-Intermediate) и выше.\n\nЧем предстоит заниматься:\n• Разрабатывать и поддерживать высокопроизводительные веб-приложения.\n• Участвовать в принятии архитектурных решений.\n• Проводить код-ревью и обеспечивать высокое качество кода.\n• Взаимодействовать с распределенной международной командой.\n\nЧто мы предлагаем:\n🌍 100% удаленная работа из любой точки мира.\n💸 Конкурентная зарплата в USD.\n🚀 Динамичная среда без бюрократии.\n⏰ Гибкий график."
+    }
+  },
+  {
+    "id": "59cd28cb-676d-4220-b928-6f43ae9315d0",
+    "companyName": "It-Bench",
+    "companyWebsite": "https://it-bench.work/",
+    "externalApplyUrl": null,
+    "dateCreated": "2026-05-12T07:46:25.356Z",
+    "isArchived": false,
+    "title": {
+      "en": "Middle/Senior Python Developer",
+      "ru": "Middle/Senior Python-разработчик"
+    },
+    "skills": {
+      "en": [
+        "Python"
+      ],
+      "ru": [
+        "Python"
+      ]
+    },
+    "description": {
+      "en": "Middle / Senior Python Engineer\nRole: Full-time / Remote\n\nCompensation: $3,000 – $5,000 USD (Monthly, based on experience)\n\nLocation: Global Remote (Work from anywhere)\n\nAbout the Role\nWe are looking for a highly skilled Python Engineer to join an international product team. This is a role for a developer who thrives in a fast-paced environment and values engineering excellence. You will be responsible for building high-performance backend systems, optimizing existing architectures, and collaborating with a distributed team of experts.\n\nWhat We Expect\n3+ years of professional experience in Python development.\nStrong expertise in modern frameworks: FastAPI (preferred), Django, or Flask.\nAdvanced knowledge of Asyncio and asynchronous programming patterns.\nSolid database skills: Proficiency in PostgreSQL (schema design, complex queries, and optimization) and Redis.\nDevOps mindset: Comfortable with Docker, CI/CD pipelines, and cloud environments (AWS/GCP).\nArchitectural thinking: Understanding of Microservices, SOLID, and Clean Architecture.\n\nEnglish Proficiency: Upper-Intermediate (B2) or higher for effective communication with a global team.\n\nKey Responsibilities\nDevelop and maintain scalable, reliable backend services.\nDesign and implement RESTful or GraphQL APIs.\nOptimize system performance to handle high-traffic loads.\nParticipate in code reviews to ensure maintainability and security.\nCollaborate with Product Managers and Frontend Engineers to deliver end-to-end features.\n\nNice to Have\nExperience with Event-Driven Architecture (Kafka, RabbitMQ).\nKnowledge of Kubernetes and Infrastructure as Code (Terraform).\nBackground in AI integrations or data-heavy applications.\n\nWhy Apply?\nCompetitive Salary: $3,000 – $5,000 USD net.\nTruly Remote: Work from any corner of the world with flexible hours.\nNo Micro-management: We value results and trust our engineers.\nInternational Exposure: Work on products for the US, European, or UAE markets.\nProfessional Growth: Access to high-load challenges and cutting-edge tech stacks.",
+      "ru": "Middle / Senior Python-инженер\nФормат: Full-time / удаленно\n\nОплата: $3,000 – $5,000 (в месяц, в зависимости от опыта)\n\nЛокация: Global Remote (работа из любой точки мира)\n\nО роли\nМы ищем высококвалифицированного Python-инженера в международную продуктовую команду. Это роль для разработчика, который силён в быстром темпе и ценит инженерное качество. Вы будете отвечать за создание высокопроизводительных backend-систем, оптимизацию существующей архитектуры и работу в распределенной команде экспертов.\n\nЧто мы ожидаем\nОт 3 лет профессионального опыта в разработке на Python.\nСильная экспертиза в современных фреймворках: FastAPI (предпочтительно), Django или Flask.\nГлубокое знание Asyncio и паттернов асинхронного программирования.\nУверенные навыки работы с базами данных: PostgreSQL (проектирование схем, сложные запросы и оптимизация) и Redis.\nDevOps-мышление: уверенная работа с Docker, CI/CD и облачными средами (AWS/GCP).\nАрхитектурное мышление: понимание микросервисов, SOLID и Clean Architecture.\n\nАнглийский язык: Upper-Intermediate (B2) и выше для эффективной работы с международной командой.\n\nОсновные обязанности\nРазработка и поддержка масштабируемых и надежных backend-сервисов.\nПроектирование и реализация REST или GraphQL API.\nОптимизация производительности системы под высокие нагрузки.\nУчастие в код-ревью для поддержания качества и безопасности.\nВзаимодействие с продакт-менеджерами и frontend-инженерами для реализации функций от начала до конца.\n\nБудет плюсом\nОпыт с событийно-ориентированной архитектурой (Kafka, RabbitMQ).\nЗнание Kubernetes и Infrastructure as Code (Terraform).\nОпыт с AI-интеграциями или высоконагруженными приложениями с данными.\n\nПочему стоит откликнуться?\nКонкурентная зарплата: $3,000 – $5,000 USD net.\nПо-настоящему удаленная работа: из любой точки мира с гибким графиком.\nБез микроменеджмента: мы ценим результат и доверяем инженерам.\nМеждународный опыт: работа над продуктами для рынков США, Европы и ОАЭ.\nПрофессиональный рост: доступ к high-load задачам и современному стеку."
+    }
+  },
+  {
+    "id": "9d5eacdc-1635-4c07-9ab7-85902e41d2f2",
+    "companyName": "It-Bench",
+    "companyWebsite": "https://it-bench.work/",
+    "externalApplyUrl": null,
+    "dateCreated": "2026-05-08T09:47:34.430Z",
+    "isArchived": false,
+    "title": {
+      "en": "Data Analyst",
+      "ru": "Аналитик данных (Data Analyst)"
+    },
+    "skills": {
+      "en": [
+        "Data Engineering",
+        "Data Analysis",
+        "Data Science"
+      ],
+      "ru": [
+        "Дата-инжиниринг",
+        "Анализ данных",
+        "Data Science"
+      ]
+    },
+    "description": {
+      "en": "Outstaffing",
+      "ru": "Аутстаффинг"
+    }
+  },
+  {
+    "id": "3081dae4-222d-41bd-9f6e-9ca761d97be9",
+    "companyName": "It-Bench",
+    "companyWebsite": "https://it-bench.work/",
+    "externalApplyUrl": null,
+    "dateCreated": "2026-04-27T07:37:59.676Z",
+    "isArchived": false,
+    "title": {
+      "en": "QA Automation Engineer (Python / RPA)",
+      "ru": "QA Automation-инженер (Python / RPA)"
+    },
+    "skills": {
+      "en": [
+        "RPA",
+        "Python"
+      ],
+      "ru": [
+        "RPA",
+        "Python"
+      ]
+    },
+    "description": {
+      "en": "About Us\n\nWe are building a Python-based RPA (Robotic Process Automation) platform that helps companies automate repetitive tasks, integrate AI, and streamline business processes. Our product combines backend services, APIs, and intelligent automation to deliver scalable solutions used by growing teams and enterprises.\n\n🎯 Responsibilities\nDesign, develop, and maintain automated test frameworks\nWrite automated tests for APIs, backend services, and RPA workflows\nPerform functional, regression, and end-to-end testing\nValidate automation pipelines, bots, and integrations\nCollaborate with developers to ensure product quality at every stage\nAnalyze test results, identify bugs, and track issues to resolution\nImprove testing processes, coverage, and CI/CD integration\n🧩 Requirements\n2+ years of experience in QA Automation\nStrong knowledge of Python for test automation\nExperience with testing APIs (Postman, REST, pytest, etc.)\nUnderstanding of software testing principles and methodologies\nExperience with test frameworks (pytest, Selenium, Playwright, etc.)\nFamiliarity with CI/CD pipelines (GitHub Actions, GitLab CI, etc.)\nExperience working with databases (SQL)\nAttention to detail and strong analytical skills\n➕ Nice to Have\nExperience with RPA tools or automation platforms\nKnowledge of performance testing (JMeter, k6, etc.)\nExperience with Docker and containerized environments\nUnderstanding of microservices architecture\nExperience testing AI/ML-based features\n💼 What We Offer\nWork on a real automation product with growing adoption\nOpportunity to influence product quality and architecture\nFlexible work format (remote/hybrid)\nFast-paced team with minimal bureaucracy\nCompetitive salary and career growth opportunities\n\nLocation: Almaty (Global Remote)\nSalary: $2000-$3500",
+      "ru": "О нас\n\nМы создаем RPA-платформу (роботизированная автоматизация процессов) на Python, которая помогает компаниям автоматизировать рутинные задачи, интегрировать AI и оптимизировать бизнес-процессы. Наш продукт объединяет backend-сервисы, API и интеллектуальную автоматизацию для создания масштабируемых решений, которыми пользуются растущие команды и корпорации.\n\n🎯 Обязанности\nПроектирование, разработка и поддержка фреймворков автоматизированного тестирования\nНаписание автотестов для API, backend-сервисов и RPA-процессов\nФункциональное, регрессионное и сквозное (end-to-end) тестирование\nВалидация пайплайнов автоматизации, ботов и интеграций\nВзаимодействие с разработчиками для обеспечения качества на каждом этапе\nАнализ результатов тестов, поиск багов и сопровождение до их устранения\nУлучшение процессов тестирования, покрытия и интеграции с CI/CD\n🧩 Требования\nОт 2 лет опыта в QA Automation\nУверенное знание Python для автоматизации тестирования\nОпыт тестирования API (Postman, REST, pytest и т. п.)\nПонимание принципов и методологий тестирования ПО\nОпыт с тест-фреймворками (pytest, Selenium, Playwright и т. п.)\nЗнакомство с CI/CD-пайплайнами (GitHub Actions, GitLab CI и т. п.)\nОпыт работы с базами данных (SQL)\nВнимательность к деталям и сильные аналитические навыки\n➕ Будет плюсом\nОпыт с RPA-инструментами или платформами автоматизации\nЗнание нагрузочного тестирования (JMeter, k6 и т. п.)\nОпыт с Docker и контейнеризированными средами\nПонимание микросервисной архитектуры\nОпыт тестирования функций на базе AI/ML\n💼 Что мы предлагаем\nРабота над реальным продуктом автоматизации с растущей аудиторией\nВозможность влиять на качество и архитектуру продукта\nГибкий формат работы (удаленно/гибрид)\nБыстрая команда с минимумом бюрократии\nКонкурентная зарплата и возможности карьерного роста\n\nЛокация: Алматы (Global Remote)\nЗарплата: $2000–$3500"
+    }
+  },
+  {
+    "id": "34033cf2-ce28-4810-92bd-89d709bf11f1",
+    "companyName": "It-Bench",
+    "companyWebsite": "https://it-bench.work/",
+    "externalApplyUrl": null,
+    "dateCreated": "2026-04-27T07:35:50.070Z",
+    "isArchived": false,
+    "title": {
+      "en": "Python Developer (RPA / Automation)",
+      "ru": "Python-разработчик (RPA / автоматизация)"
+    },
+    "skills": {
+      "en": [
+        "Python",
+        "RPA"
+      ],
+      "ru": [
+        "Python",
+        "RPA"
+      ]
+    },
+    "description": {
+      "en": "We are a fast-growing technology company building a Python-based RPA (Robotic Process Automation) platform that helps businesses automate routine processes, integrate AI, and improve efficiency. Our platform combines Python development with low-code capabilities to deliver enterprise-grade automation solutions across industries\n🎯 Responsibilities\nDevelop and maintain backend services using Python\nBuild and support automation bots (RPA workflows)\nIntegrate APIs, third-party services, and internal systems\nWork with data processing, scraping, and automation pipelines\nOptimize performance and scalability of automation solutions\nCollaborate with product and business teams to automate workflows\nDebug, test, and improve reliability of existing systems\n🧩 Requirements\n2+ years of experience with Python\nStrong understanding of REST APIs and backend development\nExperience with frameworks like FastAPI / Django / Flask\nKnowledge of SQL and working with databases\nExperience with automation, scraping, or scripting\nUnderstanding of Git and software development lifecycle\nProblem-solving mindset and attention to detail\n➕ Nice to Have\nExperience with RPA tools or automation platforms\nKnowledge of Docker / Kubernetes\nExperience with cloud platforms (Azure / AWS)\nFamiliarity with AI integrations (OCR, LLMs, etc.)\nUnderstanding of asynchronous programming\n💼 What We Offer\nWork on a real product used by leading companies\nOpportunity to build automation solutions at scale\nFlexible working format (remote/hybrid)\nFast-growing team with minimal bureaucracy\nCompetitive salary and growth opportunities\n\nLocation: Almaty (Global Remote)\nSalary: $3000 - $5000",
+      "ru": "Мы — быстрорастущая технологическая компания, создающая RPA-платформу (роботизированная автоматизация процессов) на Python, которая помогает бизнесу автоматизировать рутинные процессы, интегрировать AI и повышать эффективность. Наша платформа сочетает разработку на Python с low-code возможностями для создания решений корпоративного уровня в разных отраслях.\n🎯 Обязанности\nРазработка и поддержка backend-сервисов на Python\nСоздание и сопровождение ботов автоматизации (RPA-процессы)\nИнтеграция API, сторонних сервисов и внутренних систем\nРабота с обработкой данных, скрапингом и пайплайнами автоматизации\nОптимизация производительности и масштабируемости решений автоматизации\nВзаимодействие с продуктовыми и бизнес-командами для автоматизации процессов\nОтладка, тестирование и повышение надежности существующих систем\n🧩 Требования\nОт 2 лет опыта работы с Python\nУверенное понимание REST API и backend-разработки\nОпыт с фреймворками FastAPI / Django / Flask\nЗнание SQL и работы с базами данных\nОпыт с автоматизацией, скрапингом или скриптингом\nПонимание Git и жизненного цикла разработки ПО\nМышление, ориентированное на решение задач, и внимательность к деталям\n➕ Будет плюсом\nОпыт с RPA-инструментами или платформами автоматизации\nЗнание Docker / Kubernetes\nОпыт с облачными платформами (Azure / AWS)\nЗнакомство с AI-интеграциями (OCR, LLM и т. п.)\nПонимание асинхронного программирования\n💼 Что мы предлагаем\nРабота над реальным продуктом, которым пользуются ведущие компании\nВозможность строить решения автоматизации в масштабе\nГибкий формат работы (удаленно/гибрид)\nБыстрорастущая команда с минимумом бюрократии\nКонкурентная зарплата и возможности роста\n\nЛокация: Алматы (Global Remote)\nЗарплата: $3000 – $5000"
+    }
   }
 ]
