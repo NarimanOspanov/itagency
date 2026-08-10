@@ -2,11 +2,53 @@ const express = require('express');
 const compression = require('compression');
 const helmet = require('helmet');
 const path = require('path');
+const fs = require('fs');
 
 const app = express();
 
 // Azure App Service sets PORT environment variable
 const PORT = process.env.PORT || 3000;
+
+// --- Vacancies (positions synced from the jobsearchbot) -----------------------
+// The bot exposes positions via /apply_link as t.me deep links of the form
+//   https://t.me/<bot>?start=apply_<positionId>_<publisherToken>
+// The website is a fixed "publisher", so every apply link carries the same token.
+const POSITIONS_FILE = path.join(__dirname, 'data', 'positions.json');
+const BOT_USERNAME = String(process.env.BOT_USERNAME || 'apply_jobs_bot').replace(/^@/, '').trim();
+const APPLY_PUBLISHER_TOKEN = String(process.env.BOT_APPLY_PUBLISHER_TOKEN || 'AAAAHAAAAAAYmwKG').trim();
+
+function loadPositions() {
+  try {
+    const raw = fs.readFileSync(POSITIONS_FILE, 'utf8');
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (err) {
+    console.error('Failed to load positions.json:', err.message);
+    return [];
+  }
+}
+
+function buildApplyLink(id) {
+  const payload = APPLY_PUBLISHER_TOKEN ? `apply_${id}_${APPLY_PUBLISHER_TOKEN}` : `apply_${id}`;
+  return `https://t.me/${BOT_USERNAME}?start=${payload}`;
+}
+
+function toPublicPosition(p) {
+  return {
+    id: p.id,
+    title: p.title,
+    description: p.description || '',
+    companyName: p.companyName || '',
+    companyWebsite: p.companyWebsite || null,
+    externalApplyUrl: p.externalApplyUrl || null,
+    location: p.location || null,
+    employment: p.employment || null,
+    salary: p.salary || null,
+    dateCreated: p.dateCreated || null,
+    skills: Array.isArray(p.skills) ? p.skills : [],
+    applyLink: buildApplyLink(p.id),
+  };
+}
 
 // Security headers (relaxed CSP for Google Fonts + Material Icons)
 app.use(
@@ -51,6 +93,32 @@ app.post('/api/contact', (req, res) => {
   console.log('New contact form submission:', { name, company, phone, email, type, message });
 
   res.json({ success: true, message: 'Заявка принята. Мы свяжемся с вами в течение рабочего дня.' });
+});
+
+// API: list open vacancies (non-archived)
+app.get('/api/positions', (req, res) => {
+  const list = loadPositions()
+    .filter((p) => p && p.id && !p.isArchived)
+    .map(toPublicPosition);
+  res.json(list);
+});
+
+// API: single vacancy by id
+app.get('/api/positions/:id', (req, res) => {
+  const id = String(req.params.id || '').toLowerCase();
+  const found = loadPositions().find(
+    (p) => p && p.id && !p.isArchived && String(p.id).toLowerCase() === id
+  );
+  if (!found) return res.status(404).json({ error: 'Вакансия не найдена' });
+  res.json(toPublicPosition(found));
+});
+
+// Vacancies pages (explicit routes so they win over the SPA catch-all)
+app.get('/vacancies', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'vacancies.html'));
+});
+app.get('/vacancies/:id', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'vacancy.html'));
 });
 
 // Health check endpoint — Azure uses this for liveness probes

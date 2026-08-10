@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вакансии — ТалентХаб</title>
+<meta name="description" content="Открытые вакансии ТалентХаб. Откликнитесь на позицию прямо в Telegram.">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="/vacancies.css">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <span class="material-icons" style="font-size:26px;color:var(--accent)">hub</span>
+    <span data-i18n="brand.logo" data-i18n-html="true">Талант<span>Хаб</span></span>
+  </a>
+  <div class="nav-right-wrap">
+    <div class="nav-links">
+      <a href="/#services" data-i18n="nav.services">Услуги</a>
+      <a href="/#process" data-i18n="nav.process">Как работаем</a>
+      <a href="/#about" data-i18n="nav.about">О нас</a>
+      <a href="/vacancies" class="active" data-t="nav.vacancies">Вакансии</a>
+      <a href="/#contact" class="nav-cta" data-i18n="nav.contact">Связаться</a>
+    </div>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" class="lang-btn" data-set-lang="ru" aria-pressed="true">RU</button>
+      <button type="button" class="lang-btn" data-set-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="page-head-inner">
+    <span class="eyebrow">
+      <span class="material-icons" style="font-size:15px">work</span>
+      <span data-t="head.eyebrow">Актуальные позиции</span>
+    </span>
+    <h1 data-t="head.title" data-t-html="true">Открытые <em>вакансии</em></h1>
+    <p data-t="head.subtitle">Выберите позицию и откликнитесь в один клик — заявка отправляется прямо в наш Telegram-бот.</p>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="vac-toolbar">
+      <div class="vac-count" id="vacCount"></div>
+      <label class="vac-search">
+        <span class="material-icons">search</span>
+        <input type="text" id="vacSearch" data-t-ph="search.placeholder" placeholder="Поиск по названию, компании, навыку…" autocomplete="off">
+      </label>
+    </div>
+
+    <div id="vacState" class="state">
+      <div class="spinner"></div>
+      <p data-t="state.loading">Загружаем вакансии…</p>
+    </div>
+
+    <div id="vacGrid" class="vac-grid" hidden></div>
+
+    <div id="vacEmpty" class="state" hidden>
+      <span class="material-icons">search_off</span>
+      <p data-t="state.empty">По вашему запросу ничего не найдено.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo">
+          <span class="material-icons" style="font-size:22px;color:var(--accent)">hub</span>
+          <span data-i18n="brand.logo" data-i18n-html="true">Талант<span>Хаб</span></span>
+        </a>
+        <p data-i18n="ft.tagline">Профессиональное кадровое агентство. Работаем с 2022 года. Казахстан, СНГ и международный рекрутинг.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="ft.svc">Услуги</h4>
+        <ul>
+          <li><a href="/#services" data-i18n="ft.f1">Прямой поиск</a></li>
+          <li><a href="/#services" data-i18n="ft.f2">Массовый подбор</a></li>
+          <li><a href="/#services" data-i18n="ft.f3">HR-аутсорсинг</a></li>
+          <li><a href="/vacancies" data-t="nav.vacancies">Вакансии</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="ft.ct">Контакты</h4>
+        <ul>
+          <li><a href="#" data-i18n="ft.city1">Алматы</a></li>
+          <li><a href="#" data-i18n="ft.city2">Астана</a></li>
+          <li><a href="tel:+77029410625">+7 702 941 0625</a></li>
+          <li><a href="mailto:nariman@it-bench.work">nariman@it-bench.work</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="ft.copy">© 2026 ТалентХаб. Все права защищены.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/i18n.js" defer></script>
+<script src="/vac-i18n.js" defer></script>
+<script src="/vacancies.js" defer></script>
+</body>
+</html>
