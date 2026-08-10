@@ -25,11 +25,6 @@
     return I.lang() === 'en' ? 'TalentHub' : 'ТалентХаб';
   }
 
-  function metaRow(icon, label, valueHtml) {
-    return '<div><span class="material-icons">' + icon + '</span>' +
-      '<span>' + esc(label) + ': <b>' + valueHtml + '</b></span></div>';
-  }
-
   function applyStrip(p) {
     return '' +
       '<div class="apply-strip">' +
@@ -55,14 +50,6 @@
     document.getElementById('dTitle').textContent = I.pick(p.title);
     document.getElementById('dDesc').textContent = I.pick(p.description);
 
-    // Company + optional website
-    var companyHtml = '<span class="material-icons" style="font-size:20px;color:var(--primary)">business</span>' + esc(p.companyName);
-    if (p.companyWebsite) {
-      companyHtml += ' · <a href="' + esc(p.companyWebsite) + '" target="_blank" rel="noopener noreferrer">' +
-        esc(I.t('company.site')) + '</a>';
-    }
-    document.getElementById('dCompany').innerHTML = companyHtml;
-
     // Skills chips
     var skills = I.pickArr(p.skills);
     var $skillsWrap = document.getElementById('dSkillsWrap');
@@ -74,14 +61,6 @@
     } else {
       $skillsWrap.hidden = true;
     }
-
-    // Meta (posted date)
-    var meta = [];
-    var posted = I.formatDate(p.dateCreated);
-    if (posted) meta.push(metaRow('event', I.t('meta.posted'), esc(posted)));
-    var $meta = document.getElementById('dMeta');
-    $meta.innerHTML = meta.join('');
-    $meta.style.display = meta.length ? '' : 'none';
 
     // Sidebar apply button
     document.getElementById('dApplyBtn').setAttribute('href', p.applyLink);
