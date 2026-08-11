@@ -70,11 +70,18 @@ app.use(compression());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve static files from /public
+// Serve static files from /public.
+// Use ETag revalidation instead of a long max-age so updated CSS/JS reach
+// visitors on the next request without anyone having to clear their cache.
+// "no-cache" = the browser MAY store the file but MUST revalidate every time;
+// unchanged files come back as a tiny 304, changed files as fresh 200s.
 app.use(
   express.static(path.join(__dirname, 'public'), {
-    maxAge: '1d',
     etag: true,
+    lastModified: true,
+    setHeaders: (res) => {
+      res.setHeader('Cache-Control', 'no-cache');
+    },
   })
 );
 
@@ -93,12 +100,19 @@ app.post('/api/contact', (req, res) => {
   res.json({ success: true, message: 'Заявка принята. Мы свяжемся с вами в течение рабочего дня.' });
 });
 
+// Vacancy data is generated live (apply links, filtering) — never cache it,
+// so a positions.json or token change is reflected immediately.
+function sendFreshJson(res, payload, status = 200) {
+  res.setHeader('Cache-Control', 'no-store');
+  res.status(status).json(payload);
+}
+
 // API: list open vacancies (non-archived)
 app.get('/api/positions', (req, res) => {
   const list = loadPositions()
     .filter((p) => p && p.id && !p.isArchived)
     .map(toPublicPosition);
-  res.json(list);
+  sendFreshJson(res, list);
 });
 
 // API: single vacancy by id
@@ -107,15 +121,18 @@ app.get('/api/positions/:id', (req, res) => {
   const found = loadPositions().find(
     (p) => p && p.id && !p.isArchived && String(p.id).toLowerCase() === id
   );
-  if (!found) return res.status(404).json({ error: 'Вакансия не найдена' });
-  res.json(toPublicPosition(found));
+  if (!found) return sendFreshJson(res, { error: 'Вакансия не найдена' }, 404);
+  sendFreshJson(res, toPublicPosition(found));
 });
 
-// Vacancies pages (explicit routes so they win over the SPA catch-all)
+// Vacancies pages (explicit routes so they win over the SPA catch-all).
+// no-cache => the browser revalidates each visit and always gets the latest HTML.
 app.get('/vacancies', (req, res) => {
+  res.setHeader('Cache-Control', 'no-cache');
   res.sendFile(path.join(__dirname, 'public', 'vacancies.html'));
 });
 app.get('/vacancies/:id', (req, res) => {
+  res.setHeader('Cache-Control', 'no-cache');
   res.sendFile(path.join(__dirname, 'public', 'vacancy.html'));
 });
 
@@ -126,6 +143,7 @@ app.get('/health', (req, res) => {
 
 // Catch-all: serve index.html for any unmatched route (SPA-friendly)
 app.get('*', (req, res) => {
+  res.setHeader('Cache-Control', 'no-cache');
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
