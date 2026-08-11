@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3000;
 // The website is a fixed "publisher", so every apply link carries the same token.
 const POSITIONS_FILE = path.join(__dirname, 'data', 'positions.json');
 const BOT_USERNAME = String(process.env.BOT_USERNAME || 'apply_jobs_bot').replace(/^@/, '').trim();
-const APPLY_PUBLISHER_TOKEN = String(process.env.BOT_APPLY_PUBLISHER_TOKEN || 'AAAAHAAAAAAYmwKG').trim();
+const APPLY_PUBLISHER_TOKEN = String(process.env.BOT_APPLY_PUBLISHER_TOKEN || 'AAAX0AAAAABKkB8L').trim();
 
 function loadPositions() {
   try {
