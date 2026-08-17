@@ -107,12 +107,11 @@ function sendFreshJson(res, payload, status = 200) {
   res.status(status).json(payload);
 }
 
-// API: list open vacancies (non-archived)
+// API: list open vacancies (non-archived).
+// The public list is hidden — vacancies are reachable only by direct id link.
+// (To re-enable browsing, return the mapped list instead of 404.)
 app.get('/api/positions', (req, res) => {
-  const list = loadPositions()
-    .filter((p) => p && p.id && !p.isArchived)
-    .map(toPublicPosition);
-  sendFreshJson(res, list);
+  sendFreshJson(res, { error: 'Not found' }, 404);
 });
 
 // API: single vacancy by id
@@ -125,12 +124,13 @@ app.get('/api/positions/:id', (req, res) => {
   sendFreshJson(res, toPublicPosition(found));
 });
 
-// Vacancies pages (explicit routes so they win over the SPA catch-all).
-// no-cache => the browser revalidates each visit and always gets the latest HTML.
+// The browsable vacancies list is hidden — send visitors to the home page.
+// Individual vacancy pages stay reachable by their direct id link.
 app.get('/vacancies', (req, res) => {
-  res.setHeader('Cache-Control', 'no-cache');
-  res.sendFile(path.join(__dirname, 'public', 'vacancies.html'));
+  res.redirect(302, '/');
 });
+// Individual vacancy page (explicit route so it wins over the SPA catch-all).
+// no-cache => the browser revalidates each visit and always gets the latest HTML.
 app.get('/vacancies/:id', (req, res) => {
   res.setHeader('Cache-Control', 'no-cache');
   res.sendFile(path.join(__dirname, 'public', 'vacancy.html'));
